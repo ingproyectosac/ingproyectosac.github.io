@@ -295,7 +295,7 @@ footer .contenedor{
     align-items: flex-top;
 }
 
-@media (min-width: 500px){
+@media (min-width: 900px){
 
     header{
         position: fixed;
