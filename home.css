@@ -17,26 +17,68 @@ h5{font-size: 2.0em;}
 p{font-size: 1.25em;}
 .color-acento{ color: blueviolet;}
 
+button{
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(90, 90, 90);
+    color: white;
+    background-color: rgba(30,30,30);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(94, 94, 94);
+    border: 0.5px solid rgb(94, 94, 94);
+}
+
 .contenedor{
-    max-width: 1400px;
+    max-width: 1440px;
     margin: auto;
-    background-color: rgb(240, 240, 240);
+}
+
+header{
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 header .logo{
-    text-align: center;
-    padding: 50px 30px;
+    padding: 25px 30px;
     font-weight: bold;
     color: blueviolet;
-    font-size: 3em;
+    font-size: 1.7em;
 }
 
 header nav{
-    display: none;
+    display: flex;
+    flex-direction: row;
+    padding-top: 33px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+header a{
+    padding-right: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
 }
 
 #inicio {
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +88,7 @@ header nav{
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,.4),rgba(0,0,0,.5)
-    ) ,url("css/img/inicio.jpg");
+    ) ,url("img/inicio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -57,27 +99,32 @@ header nav{
 }
 
 #inicio h4{
-    font-size: 2.5em;
+    font-size: 2.545em;
+}
+
+#ipac{
+    background-color: rgb(230, 230, 230);
 }
 
 #ipac h2{
-    font-size: 4em;
+    font-size: 3em;
 }
 
 #ipac p{
-    font-size: 2em;
-    padding-top: 50px;
+    font-size: 1.5em;
+    padding-top: 30px;
 }
 
 #ipac .contenedor{
-    background-color: rgb(240, 240, 240);
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 2vh;
+    padding: 0 20vh;
 }
+
+
 
 #caracteristicas{
     text-align: center;
@@ -90,65 +137,65 @@ header nav{
     padding: 150px 12px;
 }
 
+#caracteristicas .programas{
+    display: flex;
+    justify-content: center;
+}
+
 #caracteristicas h2{
     margin-top: 0;
     margin-bottom: 70px;
-    font-size: 4em;
+    font-size: 3.5em;
 }
 
 #caracteristicas h3{
     margin-bottom: 20px;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 #caracteristicas p{
-    display: none;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 #caracteristicas .carta{
-    background-position: center center;
-    background-size: cover;
-    padding: 50px;
     margin: 20px;
     border-radius: 15px;
+    padding: 30px;
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(45, 45, 45, 0.2);
+    box-shadow: 0.5px 0.5px 2px rgba(0,0,0,.5);
 }
 
 .carta:first-child{
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,.4),rgba(0,0,0,.5)
-    ) ,url("css/img/ingenieria.jpg");
+    ) ,url("img/ingenieria-cut.jpg");
 }
 
 .carta:nth-child(2){
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,.4),rgba(0,0,0,.5)
-    ) ,url("css/img/acero.jpg");
+    ) ,url("img/acero-cut.jpg");
 }
 
 .carta:nth-child(3){
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,.4),rgba(0,0,0,.5)
-    ) ,url("css/img/chatarreria.jpg");
+    ) ,url("img/chatarreria-cut.jpg");
 }
 
-#caracteristicas button{
-    font-size: 1.7em;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 15px;
-    border: 0.5px solid rgb(94, 94, 94);
-    color: white;
-    background-color: rgba(30,30,30);
-    transition: all 300ms ease;
-    cursor: pointer;
-}
+
 
 #contacto{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 5em 2em;
@@ -156,30 +203,32 @@ header nav{
 
 .contenedor-form{
     width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin: 90px;
 }
 
 .contenedor-form h5{
     margin-top: 25px;
-    font-size: 4em;
-    margin: 15px;
-    text-align: center;
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
 .contenedor-form p{
-    font-size: 1.5em;
+    font-size: 17px;
     line-height: 1.7;
-    margin: 15px;
+    margin-bottom: 30px;
 }
 
 .contenedor-form a{
-    font-size: 1em;
+    font-size: 17px;
     display: inline-block;
     text-decoration: none;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 15px;
     color: black;
     font-weight: 700;
     transition: all 300ms ease;
@@ -191,14 +240,13 @@ header nav{
 
 .contenedor-form a i{
     color: blueviolet;
-    margin-right: 1.9em;
+    margin-right: 15px;
 }
 
 .info-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 2em;
 }
 
 .contenedor-form form{
@@ -206,8 +254,6 @@ header nav{
     padding: 50px 20px;
     border: 1px solid rgb(210, 210, 210);
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
 }
 
 .contenedor-form form .campo, textarea{
@@ -221,15 +267,15 @@ header nav{
 }
 
 .contenedor-form .campo{
-    max-width: 35.5vh;
-    min-width: 35.5vh;
+    max-width: 530px;
+    min-width: 530px;
 }
 
 .contenedor-form form textarea{
-    max-width: 35.5vh;
-    min-width: 35.5vh;
-    min-height: 10.5vh;
-    max-height: 10.5vh;
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 150px;
+    max-height: 150px;
 }
 
 .contenedor-form .btn-enviar{
@@ -244,15 +290,14 @@ header nav{
     cursor: pointer;
     transition: all 300ms ease;
     font-weight: bold;
-    max-width: 35.5vh;
-    min-width: 35.5vh;
-    }
+    max-width: 130px;
+    min-width: 130px;
+}
 
 .contenedor-form .btn-enviar:hover{
     background: blueviolet;
     border: 1px solid blueviolet;
     color: white;
-    
 }
 
 footer{
@@ -272,4 +317,166 @@ footer .contenedor{
     display: flex;
     justify-content: center;
     align-items: flex-top;
+}
+
+@media only screen and (max-width: 1000px){
+
+    .contenedor{
+        max-width: 1000px;
+    }
+
+    header{
+        position: relative;
+    }
+
+    header .contenedor{
+        justify-content: center;
+        background-color: white;
+        
+    }
+    
+    header nav{
+        display: none;
+    }
+
+    header .logo{
+        padding: 50px 30px;
+        font-size: 3em;
+    }
+
+    #inicio{
+        height: 60vh;
+    }
+
+    #inicio h1{
+        font-size: 6em;
+    }
+    
+    #ipac h2{
+        font-size: 4em;
+    }
+
+    #inicio h4{
+        font-size: 2.5em;
+    }
+        
+    #ipac p{
+        font-size: 2em;
+        padding-top: 50px;
+    }
+
+    #ipac .contenedor{
+        height: 60vh;
+        padding: 2vh;
+    }
+
+    #caracteristicas .programas{
+        display: block;
+    }
+
+    #caracteristicas h2{
+        font-size: 4em;
+    }
+    
+    #caracteristicas h3{
+        font-size: 3em;
+    }
+    
+    #caracteristicas p{
+        display: none;
+    }
+
+    #caracteristicas .carta{
+        background-position: center center;
+        background-size: cover;
+        padding: 50px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,.4),rgba(0,0,0,.5)
+        ) ,url("img/ingenieria.jpg");
+    }
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,.4),rgba(0,0,0,.5)
+        ) ,url("img/acero.jpg");
+    }
+    
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,.4),rgba(0,0,0,.5)
+        ) ,url("img/chatarreria.jpg");
+    }
+
+    #contacto{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-form{
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-form h5{
+        margin-top: 25px;
+        font-size: 4em;
+        margin: 15px;
+        text-align: center;
+    }
+    
+    .contenedor-form p{
+        font-size: 1.5em;
+        margin: 20px 0px;
+    }
+    
+    .contenedor-form a{
+        font-size: 2em;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+        
+    .contenedor-form a i{
+        margin-right: 25px;
+    }
+        
+    .contenedor-form form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-form form .campo, textarea{
+        font-size: 30px;
+    }
+        
+    .contenedor-form .campo{
+        max-width: 700px;
+        min-width: 700px;
+        max-height: 70px;
+        min-height: 70px;
+    }
+    
+    .contenedor-form form textarea{
+        max-width: 700px;
+        min-width: 700px;
+        max-height: 350px;
+        min-height: 350px;
+    }
+    
+    .contenedor-form .btn-enviar{
+        max-width: 700px;
+        min-width: 700px;
+    }
+
 }
