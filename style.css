@@ -48,22 +48,36 @@ header{
 header .contenedor{
     display: flex;
     flex-direction: row;
+    height: 70px;
     justify-content: space-between;
 }
 
 header .logo{
-    padding: 25px 30px;
-    font-weight: bold;
     color: blueviolet;
-    font-size: 1.7em;
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.logo a{
+    color: blueviolet;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    height: 50px;
 }
 
 header nav{
     display: flex;
     flex-direction: row;
-    padding-top: 33px;
     padding-right: 30px;
     text-align: center;
+    align-items: center;
 }
 
 header a{
@@ -327,12 +341,12 @@ footer .contenedor{
 
     header{
         position: relative;
+        height: 100px;
     }
 
     header .contenedor{
         justify-content: center;
         background-color: white;
-        
     }
     
     header nav{
